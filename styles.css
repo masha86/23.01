@@ -1,0 +1,106 @@
+a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #004994;
+}
+
+a:focus + div.slide {
+    opacity: 1;
+    transition: opacity 1s;
+    z-index: 1;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    background-color: #a5c0c0;
+    opacity: 0;
+    z-index: 0;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slide h1 {
+    color: white;
+    font-family:'Poppins', sans-serif;
+    font-size: 48px;
+    transition: all 0.5s ease-in-out;
+}
+
+a:focus + .slide.first p,
+a:focus + .slide.first h1 {
+    transform: rotate(720deg);
+}
+
+.slide p {
+    color: white;
+    font-family:'Poppins', sans-serif;
+    font-size: 18px;
+    transition: all 0.5s ease-in-out;
+}
+
+.slide.first img {
+    width: 50%;
+    height: 50%;
+    margin-top: 60px;
+}
+
+a:focus + .slide.first img {
+    transition: 1.5s;
+    transform: scaleY(1.2);
+}
+
+.slide.second{
+    background-color: #94b8b8;
+}
+
+.slide.second h1 {
+    transition: all 3s ease-in-out;
+}
+
+a:focus + .slide.second h1 {
+    transform: rotate(360deg);
+}
+
+.slide.second img {
+    margin-top: 50px;
+    width: 50%;
+    height: 50%;
+}
+
+a:focus + .slide.second img {
+    transition: transform 3s;
+    transition-delay: 0.5s;
+    transform: scale(1.1);
+}
+
+.slide.third {
+    background-color:  #a3c2c2;
+}
+
+.slide.third h1 {
+    transition: all 3s ease-in-out;
+    transform: scale(1.2, 0.5);
+}
+
+a:focus + .slide.third h1 {
+    transform: scale(1);
+}
+
+.slide.third img {
+    width: 50%;
+    height: 70%;
+    margin-top: 50px;
+    transform: skewX(20deg);
+}
+
+a:focus + .slide.third img{
+    transition: transform 3s;
+    transition-delay: 0.5s;
+    transform: skewX(0deg);
+}
